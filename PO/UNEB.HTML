@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall of Fame</title>
+    
+      
+    <link rel="stylesheet" href="style.css">
+    <header>
+
+  <nav class="lol">
+    <div class="logo">
+        <a href="#">UGANDA MARYRTRS CENTINARY SSS   KANGULUMIRA</a>
+    </div>
+    <ul class="nav-links">
+      
+
+
+      <div class="search-container">
+        <input type="text" placeholder="Search.." id="search-input">
+        <button type="button" onclick="searchFunction()"><i class="fas fa-search"></i></button>
+    </div>
+
+
+
+</nav>
+
+
+  <nav>
+    <div class="logo">
+    
+    <img src="pics/J.png" alt="">
+    <a href="#">MOTTO   "ENDURE UNTIL SUCCESS</a>
+
+    
+    </div>
+
+
+      <nav class="navbar">
+        <a href="#" class="toggle-button" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </a>
+        <div class="navbar-links" id="navbar-links">
+            <ul>
+                <li><a href="index.html" onclick="navigateToSection('home')">HOME</a></li>
+                <li><a href="#about" onclick="navigateToSection('about')">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">ABOUT US</a>
+                    <div class="dropdown-content">
+                        <a href="admin.html" onclick="navigateToSection('admissions')">Administration</a>
+                        <a href="#" onclick="navigateToSection('online')">School anthem</a>
+                        <a href="#" onclick="navigateToSection('online')">founders </a>
+
+
+                    </div>
+                </li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">ADMISSIONS</a>
+                    <div class="dropdown-content">
+                        <a href="admin.html" onclick="navigateToSection('admissions')">Admission</a>
+                        <a href="#" onclick="navigateToSection('online')">Apply online</a>
+                        
+
+
+                    </div>
+                </li>
+
+
+
+
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">ACADEMICS</a>
+                    <div class="dropdown-content">
+                        <a href="#academic.html">Academics</a>
+                        <a href="#staff" onclick="navigateToSection('staff')">Staff</a>
+                        <a href="UNEB.HTML" onclick="navigateToSection('uneb')">UNEB</a>
+                        <a href="#uneb" onclick="navigateToSection('uneb')">departments</a>
+                        <a href="#uneb" onclick="navigateToSection('uneb')">currriculum</a>
+                        
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+<
+    <style>
+    
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;
+            color: #444;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .candidate {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .candidate:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .candidate img {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            object-fit: cover;
+        }
+
+        .candidate-info {
+            padding: 20px;
+        }
+
+        .candidate-info h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .candidate-info p {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wall of Fame</h1>
+        <div class="grid">
+       
+            <!-- Example placeholders for additional candidates -->
+            <div class="candidate">
+                <img src="pics/Olevel.jpg" alt="Candidate 3">
+                <div class="candidate-info">
+                    <h2>Candidate OLEVEL  2023</h2>
+                    
+                </div>
+                </div>
+                </div>
+                
+            </div>
+            <div class="candidate">
+                <img src="pics/ALEVEL.jpg" alt="Candidate 4">
+                <div class="candidate-info">
+                    <h2>Candidate ALEVEL  2023</h2>
+                 
+                </div>
+            </div>
+
+            <script>  
+                function openModal(title, info, imageUrl) {
+                    document.getElementById('modal-title').innerText = title;
+                    document.getElementById('modal-info').innerText = info;
+                    document.getElementById('modal-image').src = imageUrl;
+                    document.getElementById('myModal').style.display = "block";
+                }
+        
+                function closeModal() {
+                    document.getElementById('myModal').style.display = "none";
+                }
+        
+                // Close the modal when clicking outside of the modal content
+                window.onclick = function(event) {
+                    const modal = document.getElementById('myModal');
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+        </script>
+            
+        
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>Welcome to [School Name], where we nurture and educate the next generation with passion and care.</p>
+        </div>
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>Email: contact@schoolname.com</li>
+                <li>Phone: (123) 456-7890</li>
+                <li>Address: 123 School Street, Education City, ED 12345</li>
+            </ul>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 [Uganda Martyrs Centinary sss kangulumia] <br>| Designed by  hassan magumba </p>
+        <button id="back-to-top">Back to Top</button>
+    </div>
+  </footer>
+  
+  <section id="about">
+      <h1>About</h1>
+      <p>This is the about section.</p>
+  </section>
+  
+  
+  </main>
+  
+  
+  
+  <script src="index.js"></script>             
+                    
+  </body>
+  
+  </html>
+  
+  
+  
+  
+  
